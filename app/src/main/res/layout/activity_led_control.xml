@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".LedControlActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/weatherText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#747785"
+        android:gravity="center"
+        android:text="Now Weather"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/weatherButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/button_background"
+            android:text="날씨별 분사"
+            android:textColor="#747785" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="1번 흐림 \n 2번 맑음 \n 3번 눈/비" />
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/push1button"
+            android:layout_width="match_parent"
+            android:textColor="#747785"
+
+            android:background="@drawable/button_background"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="push1"
+            android:text="1번향 분사" />
+
+        <Button
+            android:id="@+id/push2button"
+            android:background="@drawable/button_background"
+            android:textColor="#747785"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="push2"
+            android:text="2번향 분사" />
+
+        <Button
+            android:id="@+id/push3button"
+            android:background="@drawable/button_background"
+            android:textColor="#747785"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="push3"
+            android:text="3번향 분사" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        android:background="@drawable/button_background"
+        android:textColor="#747785"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginVertical="5dp"
+        android:onClick="disconnectBluetooth"
+        android:text="Disconnect" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#747785"
+
+            android:ems="10"
+            android:hint="Please select a repetition time. "
+            android:inputType="time" />
+
+        <Button
+            android:id="@+id/timerButton"
+            android:layout_width="wrap_content"
+            android:background="@drawable/button_background"
+            android:textColor="#747785"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#747785"
+
+        android:text="Device Status"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_view_backcolor"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvLEDstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="#FFFFFF"
+
+            android:textSize="16sp" />
+    </ScrollView>
+
+
+</LinearLayout>
